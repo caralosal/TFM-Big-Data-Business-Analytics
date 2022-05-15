@@ -1,5 +1,8 @@
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
+import plotly.graph_objects as go
+
 
 def mae(predictions, targets):
     """Función que calcula el MAE (Mean Absolute Error) entre la predicción
@@ -74,3 +77,38 @@ def calculo_metricas(dataframe):
     # Dataframe de métricas por meses                        
     metricas_mensuales_dataframe = dataframe.groupby([dataframe.index.year,dataframe.index.month])[["MAE", "MAPE"]].mean()
     return dataframe, metricas_mensuales_dataframe, metrica
+
+def plot_meses(df):
+    
+    """Función que hace un gráfico del backtesting de todo 2021 por meses
+    Params:
+        df -> dataframe resultante del backtesting que tiene que tener el nombre de columnas siguientes:
+            index -> datetime index
+            Real -> valores reales de cotizaciones
+            Pred -> valores predichos por el modelo
+    """
+    
+    dic = {1 : 'Enero', 2 : 'Febrero', 3 : 'Marzo', 4 : 'Abril',
+          5 : 'Mayo', 6 : 'Junio', 7 : 'Julio', 8 : 'Agosto',
+          9 : 'Septiembre', 10: 'Octubre', 11:'Noviembre', 12 : 'Diciembre'}
+    
+    for i in range(1,13):
+        # Actualizamos la fecha para cada mes
+        fecha = "2021-" + str(i)
+        dataframe = df.loc[fecha][["Pred", "Real"]]
+
+        fig = go.Figure()
+        fig.add_trace(go.Scatter(x=dataframe.index, y=dataframe.Real,
+                        mode='lines',
+                        name='Real'))\
+            .add_trace(go.Scatter(x=dataframe.index, y=dataframe.Pred,
+                        mode='lines',
+                        name='Predicciones'))
+        title = dic[i] + " con un WMAPE de {0} %" .format( round(wmape(dataframe.Pred, dataframe.Real), 2))
+        fig.update_layout(
+            title= title ,
+            xaxis_title='Fecha',
+            yaxis_title="Spot eléctrico €/MWh",
+            legend_title="Comparativa")
+
+        fig.show()
