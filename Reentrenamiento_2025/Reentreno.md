@@ -1,0 +1,2 @@
+# Reentrenamiento de modelos
+Hace poco se cumplirán 4 años desde que presenté mi TFM. El objetivo era la predicción del precio de la luz en España a nivel horario. En el presente estudio, evidenciaré la necesidad de reentrenamiento de modelos, el concepto de data drift y cómo varían las correlaciones.
