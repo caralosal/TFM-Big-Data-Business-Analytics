@@ -64,7 +64,7 @@ Para visualizarlo, puedes observar los siguientes gráficos:
 
 En primer lugar, analizamos la propia variable objetivo. Aquí encontramos la primera diferencia clave. La media de la variable objetivo ha pasado de 45€/MWh en enero de 2021 a 120€/MWh en enero de 2025. Otra diferencia es la volatilidad, mientras que en 2021 había poca desviación (casi todos los precioes estaban concentrados en su media) en 2025, hay un amplio abanico de precios a lo largo de todo el mes, aumentando mucho la volatilidad 
 
-![alt text](https://github.com/caralosal/TFM-Big-Data-Business-Analytics/blob/master/Reentrenamiento_2025/variable_objetivo.png?raw=true)
+![alt text](https://github.com/caralosal/TFM-Big-Data-Business-Analytics/blob/master/Reentrenamiento_2025/target.png?raw=true)
 
 Como hemos visto en gráficos de correlaciones anteriores, el precio del gas es una variable muy correlada positiva con la variable objetivo, esto es, cuanto más caro esté el gas, más caro será el precio de la luz. Analizando el siguiente gráfico, se observa una diferencia muy notable en las distribuciones. Las distribuciones están perfectamente separadas de 2021 a 2025, el precio del gas se ha triplicado
 
@@ -76,7 +76,15 @@ Otra variable interesante que ha modificado mucho su valor respecto 2021 es el s
 
 ## 6. Conclusiones
 
-Como cabría esperar, el reentrenamiento del modelo y el monitoreo tanto de las variables como de las métricas de performance es algo crítico a la hora de diseñar y mantener un modelo, en el presente estudio se ha demostrado el impacto que puede llegar a tener y se ha cuantificado 
+La siguiente tabla resume los resultados obtenidos en este estudio:
+| Modelo | Datos  | WAPE (%) |
+|-----:|-----------|
+|   2021  |  2021|19.52|
+|     2021| 2025 |46.78    |
+|     2025| 2025 |19.50       |
+
+Como cabría esperar, el reentrenamiento del modelo y el monitoreo tanto de las variables como de las métricas de performance es algo crítico a la hora de diseñar y mantener un modelo, en el presente estudio se ha demostrado el impacto que puede llegar a tener y se ha cuantificado.
+
 - Destacar cómo se ha vuelto a obtener las mismas métricas de error con el reentrenamiento que había inicialmente
 - Demostración visual y cuantitativa del efecto de reentreno
 - El data drift es algo que hay que monitorear y tener en cuenta en el mantenimiento de los modelos
