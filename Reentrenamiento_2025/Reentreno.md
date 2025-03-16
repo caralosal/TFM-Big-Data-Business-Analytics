@@ -52,9 +52,14 @@ Con un reentrenamiento del modelo, volvemos a recuperar las métricas obtenidas 
 El objetivo de esta sección es darle sentido a los resultados anteriores. Los resultados del modelo han empeorado sin el reentrenamiento pero, tras el reentrenamiento, han vuelto prácticamente al mismo valor de error que cuando se diseñó (un 19.5%). ¿Cómo ha ocurrido esto?
 Para entenderlo, hay que introducir los siguientes conceptos.
 
-(Hablar concepto data drift y correlaciones)
+Se produce **data drift** cuando se dan cambios en la distribución de las variables de entrada del modelo de Machine Learning a lo largo del tiempo. Puede darse por determinados motivos
++ Que los datos hayan sido recopilados en diferentes periodos de tiempo 
++ Que haya datos que provengan de distintas fuentes
++ Que el proceso de recopilación de los datos sea diferente y genere ciertas inconsistencias.
 
-El modelo entrenó con unos determinados datos en 2021, en el que las variables tenían determinadas relaciones, estas relaciones se han modificado ligeramente, además de que los modelos no son perfectos.
+En este caso, estamos comparando 2021 con 2025, así que el data drift se produce por la recopilación de datos en diferentes periodos de tiempo. **Añadir prueba de Kolmogorov-Smirnof para darle el toque final**
+
+Por otra parte, existe el **concept drift**. En él, nos estamos refiriendo a cambios en la relación entre las variables de entrada y la variable objetivo. Aquí, incluso si la distribución de las variables de entrada no se ve alterada, sí lo hacen las reglas que definen el comportamiento global del sistema con el paso del tiempo. El modelo entrenó con unos determinados datos en 2021, en el que las variables tenían determinadas relaciones, estas relaciones se han modificado ligeramente en 2025, incurriendo en el **concept drift**.
 
 (Hacer gráfico más bonito para visualizar la variación de correlaciones entre 2025 y 2021)
 
