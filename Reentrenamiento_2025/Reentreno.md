@@ -78,7 +78,7 @@ Otra variable interesante que ha modificado mucho su valor respecto 2021 es el s
 
 La siguiente tabla resume los resultados obtenidos en este estudio:
 | Modelo | Datos  | WAPE (%) |
-|-----:|-----------|
+|-----:|----|-----------|
 |   2021  |  2021|19.52|
 |     2021| 2025 |46.78    |
 |     2025| 2025 |19.50       |
