@@ -86,11 +86,13 @@ Otra variable interesante que ha modificado mucho su valor respecto 2021 es el s
 Los resultados de este estudio confirman la importancia del reentrenamiento y monitoreo continuo en modelos de machine learning en producción. Como se observa en la siguiente tabla, el modelo entrenado en 2021 experimentó una degradación significativa cuando se aplicó a datos de 2025, aumentando su error de un WAPE del 19.52% a un 46.78%. Sin embargo, al actualizarlo con datos recientes, el modelo recuperó su precisión original, reduciendo nuevamente el error al 19.50%.
 
 <div align="center">
+
 | Modelo | Datos  | WAPE (%) |
-|-----:|----|-----------|
-|   2021  |  2021|19.52|
-|     2021| 2025 |46.78    |
-|     2025| 2025 |19.50       |
+|:------:|:------:|:--------:|
+|  2021  |  2021  |  19.52   |
+|  2021  |  2025  |  46.78   |
+|  2025  |  2025  |  19.50   |
+
 </div>
 
 A partir de estos resultados, se pueden extraer las siguientes conclusiones clave:
