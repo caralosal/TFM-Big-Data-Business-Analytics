@@ -103,9 +103,9 @@ Los resultados de este estudio confirman la importancia del reentrenamiento y mo
 
 | Modelo | Datos  | WAPE (%) |
 |:------:|:------:|:--------:|
-|  2021  |  2021  |  19.52   |
-|  2021  |  2025  |  46.78   |
-|  2025  |  2025  |  19.50   |
+|  Modelo original  |  2021  |  19.52   |
+|  Modelo sin reentrenamiento  |  2025  |  46.78   |
+|  Modelo con reentrenamiento  |  2025  |  19.50   |
 
 </div>
 
