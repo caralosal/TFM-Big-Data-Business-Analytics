@@ -24,7 +24,7 @@ A través de este análisis, veremos cómo las correlaciones entre variables y l
 
 ## 2. Modelo original - Predicciones en 2021
 
-**El objetivo del modelo original fue el de la predicción del precio de la luz a nivel horario en España en 2021**. Para realizar la comparación, nos quedamos con el mes de enero de 2021 para que la comparación sea directa. Tras una serie de pruebas, se obtuvo un modelo de XGBoost. Las métricas arrojadas por este modelo en los dos primeros meses de 2021 fueron de un **WAPE del 19.52%**. Visualmente, se puede ver en el siguiente gráfico.
+**El objetivo del modelo original fue el de la predicción del precio de la luz a nivel horario en España en 2021**. Para realizar la comparación, nos quedamos con el mes de enero de 2021 para que la comparación sea directa. Tras una serie de pruebas, se obtuvo un modelo de XGBoost. Las métricas arrojadas por este modelo en el primer mes de 2021 fueron de un **WAPE del 19.52%**. Visualmente, se puede ver en el siguiente gráfico.
 
 ![alt text](https://github.com/caralosal/TFM-Big-Data-Business-Analytics/blob/master/Reentrenamiento_2025/grafico_2021.png?raw=true)
 
@@ -41,7 +41,7 @@ El modelo original obtiene un **WAPE del 46.78%** sobre el conjunto de datos de 
 
 ## 4. Modelo reentrenado - Predicciones en 2025
 
-¿Qué pasaría si reentrenamos el modelo con los datos más recientes? En esta sección, utilizamos los datos más recientes para reentrenar el modelo y evaluar su desempeño en los meses de enero y febrero de 2025. ¿Cuál sería el resultado?
+¿Qué pasaría si reentrenamos el modelo con los datos más recientes? En esta sección, utilizamos los datos más recientes para reentrenar el modelo y evaluar su desempeño en el mes de enero de 2025. ¿Cuál sería el resultado?
 
 **Gracias al reentrenamiento, el modelo logra recuperar el nivel de precisión que tenía en 2021**, alcanzando un **WAPE del 19.50%**, prácticamente igual al obtenido con el mejor modelo original. Este resultado refuerza la importancia de actualizar los modelos periódicamente para evitar la degradación de su rendimiento.
 
