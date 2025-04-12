@@ -62,13 +62,19 @@ En este caso, estamos comparando 2021 con 2025, así que el data drift se produc
 
 Para visualizar el **data drift**, puedes observar los siguientes tres gráficos, en los que vamos a comparar las distribuciones en 2021 y 2025 del precio de la luz, el precio del gas y el spread del precio (calcula la diferencia entre el precio máximo y mínimo en el precio de la luz en un mismo día)
 
+#### 5.1.1. Data drift en el precio de la luz
+
 En primer lugar, analizamos la propia variable objetivo. Aquí encontramos la primera diferencia clave. La media de la variable objetivo ha pasado de 45€/MWh en enero de 2021 a 120€/MWh en enero de 2025. Otra diferencia es la volatilidad, mientras que en 2021 había poca desviación (casi todos los precios estaban concentrados en su media) en 2025, hay un amplio abanico de precios a lo largo de todo el mes, aumentando mucho la volatilidad.
 
 ![alt text](https://github.com/caralosal/TFM-Big-Data-Business-Analytics/blob/master/Reentrenamiento_2025/target.png?raw=true)
 
+#### 5.1.2. Data drift en el precio del gas
+
 El precio del gas es una variable muy correlada positiva con la variable objetivo, esto es, cuanto más caro esté el gas, más caro será el precio de la luz. Analizando el siguiente gráfico, se observa una diferencia muy notable en las distribuciones. Las distribuciones están perfectamente separadas de 2021 a 2025, el precio del gas se ha triplicado
 
 ![alt text](https://github.com/caralosal/TFM-Big-Data-Business-Analytics/blob/master/Reentrenamiento_2025/gas.png?raw=true)
+
+#### 5.1.3. Data drift en el spread del precio
 
 Otra variable interesante que ha modificado mucho su valor respecto 2021 es el spread del precio. Esta variable representa la diferencia del precio de la luz de una hora a otra, es decir, es una especie de la medida de la volatilidad, ya que recoge la diferencia de precio de una hora y otra. Como vemos, en 2025 hay mucha más volatilidad en estos precios, también relacionado con que los precios son más altos, la variación de precios también está siendo más alto
 
