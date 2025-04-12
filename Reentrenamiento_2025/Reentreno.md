@@ -69,7 +69,7 @@ Para visualizar el **concept drift**, puedes observar los siguientes gráficos:
 
 Para visualizar el **data drift**, puedes observar los siguientes gráficos:
 
-En primer lugar, analizamos la propia variable objetivo. Aquí encontramos la primera diferencia clave. La media de la variable objetivo ha pasado de 45€/MWh en enero de 2021 a 120€/MWh en enero de 2025. Otra diferencia es la volatilidad, mientras que en 2021 había poca desviación (casi todos los precioes estaban concentrados en su media) en 2025, hay un amplio abanico de precios a lo largo de todo el mes, aumentando mucho la volatilidad 
+En primer lugar, analizamos la propia variable objetivo. Aquí encontramos la primera diferencia clave. La media de la variable objetivo ha pasado de 45€/MWh en enero de 2021 a 120€/MWh en enero de 2025. Otra diferencia es la volatilidad, mientras que en 2021 había poca desviación (casi todos los precios estaban concentrados en su media) en 2025, hay un amplio abanico de precios a lo largo de todo el mes, aumentando mucho la volatilidad 
 
 ![alt text](https://github.com/caralosal/TFM-Big-Data-Business-Analytics/blob/master/Reentrenamiento_2025/target.png?raw=true)
 
@@ -105,4 +105,10 @@ A partir de estos resultados, se pueden extraer las siguientes conclusiones clav
 
 ✅ **No podemos asumir que un modelo funcionará indefinidamente**: Incluso un modelo que fue altamente preciso en su momento puede volverse obsoleto si no se revisa periódicamente. El mantenimiento activo es clave para garantizar su eficacia a largo plazo.
 
-Este análisis refuerza la importancia de diseñar modelos de machine learning con una estrategia de actualización y monitoreo continuo, asegurando así su adaptabilidad a cambios en los datos y en el contexto del problema.
+## 7. Fuentes de datos
+- https://www.esios.ree.es/es/analisis/600?vis=1&start_date=01-01-2021T00%3A00&end_date=30-11-2021T23%3A00&compare_start_date=31-12-2020T00%3A00&groupby=hour&geoids=3
+- https://www.mibgas.es/es/file-access
+- https://www.esios.ree.es/es/analisis/1775?vis=1&start_date=06-10-2016T00%3A00&end_date=31-12-2021T23%3A50&compare_start_date=05-10-2016T00%3A00&groupby=hour
+- https://www.esios.ree.es/es/analisis/10358?vis=1&start_date=01-10-2015T00%3A00&end_date=31-12-2021T23%3A50&compare_start_date=30-09-2015T00%3A00&groupby=hour
+- https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=fa8357cec5efa610VgnVCM1000001d4a900aRCRD&vgnextchannel=374512b9ace9f310VgnVCM100000171f5a0aRCRD&vgnextfmt=default
+
